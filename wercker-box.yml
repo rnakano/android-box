@@ -1,0 +1,12 @@
+name: android-box
+version: 0.0.1
+type: main
+platform: ubuntu@12.04
+description: android build
+keywords:
+  - android
+script: |
+  sudo dpkg --add-architecture i386
+  sudo apt-get update
+  sudo apt-get install -yq libstdc++6:i386 zlib1g:i386 libncurses5:i386 ant maven openjdk-7-jdk --no-install-recommends
+  sudo apt-get clean
